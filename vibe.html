@@ -17,7 +17,7 @@
 
 <script>function example2() {
   // For a single value you can pass in a Number rather than an Array
-  navigator.vibrate(500);
+  navigator.vibrate([500]);
 }
 </script>
 <button class="btn btn-primary" onclick="example1()">Vibrate 500ms</button>
@@ -32,6 +32,17 @@
 </script>
 <br>
 <button class="btn btn-primary" onclick="startPattern()">Pattern 1</button>
+
+<script>
+	function startPattern2() {
+  // Values at even indices (0, 2, 4, ...) specify vibrations, while the odd
+  // indices specify pauses.
+  // Vibrate for 500ms 6 times, pausing for 250ms in between each one.
+  navigator.vibrate([50, 50, 50, 50, 100, 50, 50, 50, 100, 20, 100]);
+}
+</script>
+<br>
+<button class="btn btn-primary" onclick="startPattern2()">Pattern 2</button>
 <br>
 <script>
 	function stopVibrations() {
