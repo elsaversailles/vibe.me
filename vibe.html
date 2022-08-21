@@ -21,12 +21,11 @@
 <div class="container bg-dark">
 	<div class="col-md-12 text-center">
 <br>
-<script>function example1() {
-	while (0 = 0) {
+<script>var doIt = setInterval(function example1() {
   // For a single value you can pass in a Number rather than an Array
+  //ADD CONTINUES LOOP
   navigator.vibrate([500]);
-}
-}
+},2000);
 </script>
 <button class="btn btn-primary" onclick="example1()">Vibrate 500ms</button>
 <br>
@@ -61,6 +60,7 @@
 </script>
 <br>
 <button class="btn btn-primary" onclick="stopVibrations()">Stop</button>
+<button class="btn btn-secondary" onclick="clearInterval(doIt)">Js Stop</button>
 </div>
 </div>
 </body>
