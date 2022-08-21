@@ -22,7 +22,7 @@
 	<div class="col-md-12 text-center">
 <br>
 <script>
-	var doIt = setInterval(function example1() {
+	setInterval(function example1() { //remove doit variable
   // For a single value you can pass in a Number rather than an Array
   //ADD CONTINUES LOOP
   //Continues loop added, calling function every 2secs
@@ -32,7 +32,7 @@
 <button class="btn btn-primary" onclick="example1()">Vibrate 500ms</button>
 <br>
 <script>
-	var doIt = setInterval(function startPattern() {
+	setInterval(function startPattern() { //remove doit variable
   // Values at even indices (0, 2, 4, ...) specify vibrations, while the odd
   // indices specify pauses.
   // Vibrate for 500ms 6 times, pausing for 250ms in between each one.
@@ -43,12 +43,12 @@
 <button class="btn btn-primary" onclick="startPattern()">Pattern 1</button>
 <br>
 <script>
-	function startPattern2() {
+	setInterval(function startPattern2() {
   // Values at even indices (0, 2, 4, ...) specify vibrations, while the odd
   // indices specify pauses.
   // Vibrate for 500ms 6 times, pausing for 250ms in between each one.
   navigator.vibrate([50, 200, 50, 200, 50, 200, 50, 200, 50, 200, 50]);
-}
+},1000);
 </script>
 <br>
 <button class="btn btn-primary" onclick="startPattern2()">Pattern 2</button>
@@ -62,7 +62,7 @@
 </script>
 <br>
 <button class="btn btn-primary" onclick="stopVibrations()">Stop</button>
-<button class="btn btn-secondary" onclick="clearInterval(doIt)">Js Stop</button>
+<button class="btn btn-secondary" onclick="clearInterval">Js Stop</button> //remove doit variable
 </div>
 </div>
 </body>
