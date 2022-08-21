@@ -21,21 +21,23 @@
 <div class="container bg-dark">
 	<div class="col-md-12 text-center">
 <br>
-<script>var doIt = setInterval(function example1() {
+<script>
+	var doIt = setInterval(function example1() {
   // For a single value you can pass in a Number rather than an Array
   //ADD CONTINUES LOOP
+  //Continues loop added, calling function every 2secs
   navigator.vibrate([500]);
 },2000);
 </script>
 <button class="btn btn-primary" onclick="example1()">Vibrate 500ms</button>
 <br>
 <script>
-	function startPattern() {
+	var doIt = setInterval(function startPattern() {
   // Values at even indices (0, 2, 4, ...) specify vibrations, while the odd
   // indices specify pauses.
   // Vibrate for 500ms 6 times, pausing for 250ms in between each one.
   navigator.vibrate([500, 250, 500, 250, 500, 250, 500, 250, 500, 250, 500]);
-}
+},1000); //repeats pattern every 1 sec doIt var overloaded
 </script>
 <br>
 <button class="btn btn-primary" onclick="startPattern()">Pattern 1</button>
